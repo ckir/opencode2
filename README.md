@@ -2,7 +2,7 @@
 
 OpenCode V2 plugin that restores the `todowrite` tool and shows a live todo list in the session sidebar.
 
-> **V2 only.** This plugin requires `opencode2` (the V2 runtime) and is **not** compatible with opencode v1. It uses only the V2 `@opencode-ai/plugin` Promise and TUI APIs — `Plugin.define`, `ctx.tool.transform`, `ctx.session.hook`, and `context.ui.slot`. None of the v1 hook names (`tool.execute.before`, `chat.message`, the singular `plugin` config key, etc.) are used.
+> **V2 only.** This plugin requires OpenCode V2 and uses the `@opencode/plugin` Promise and `@opencode/plugin/tui` TUI APIs — `Plugin.define`, `ctx.tool.transform`, `ctx.session.hook`, and `context.ui.slot`.
 
 ## Features
 
@@ -31,7 +31,7 @@ This is the proven way to load the plugin before it is published. Point `plugins
 
 Requirements:
 
-- Run `bun install` in the plugin folder (`opencode2-todo/`) first so `node_modules/@opencode-ai/plugin` is present. opencode resolves that peer when it imports the entrypoint.
+- Run `bun install` in the plugin folder (`opencode2-todo/`) first so `node_modules/@opencode/plugin` is present. OpenCode resolves `@opencode/plugin/tui` at runtime for the TUI entry.
 - The `tui: true` flag only affects the optional TUI sidebar. The server-side `todowrite` tool works whether or not the TUI is running.
 
 opencode2 transpiles the TypeScript entry at runtime — no build step. Alternatively, drop or copy the plugin folder into a `plugins/` subdirectory of your config dir; opencode2 auto-discovers `.ts`/`.js` files there.

@@ -14,16 +14,6 @@
     "ai",
     "agent"
   ],
-  "keywords": [
-    "opencode",
-    "opencode-plugin",
-    "opencode2",
-    "plugin",
-    "todo",
-    "tasks",
-    "ai",
-    "agent"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gabparrot/opencode2-todo-tool.git"
@@ -34,6 +24,7 @@
     ".": "./src/index.ts",
     "./tui": "./src/tui.tsx"
   },
+  "main": "./src/index.ts",
   "files": [
     "src",
     "tool"
@@ -43,7 +34,7 @@
     "test": "bun test"
   },
   "dependencies": {
-    "@opencode-ai/plugin": "0.0.0-beta-18155"
+    "@opencode/plugin": "latest"
   },
   "peerDependencies": {
     "@opentui/core": ">=0.5.8",
@@ -62,6 +53,7 @@
     }
   },
   "devDependencies": {
+    "@opencode/plugin": "latest",
     "@opentui/core": "0.5.8",
     "@opentui/solid": "0.5.8",
     "@types/bun": "^1.4.0",

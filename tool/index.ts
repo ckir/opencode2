@@ -1,4 +1,4 @@
-import type { Plugin } from "@opencode-ai/plugin"
+import type { Plugin } from "@opencode/plugin"
 import { countTodos, formatTodos } from "./format"
 import { inputSchema, outputSchema } from "./schema"
 import { saveTodos } from "./store"
