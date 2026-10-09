@@ -9,13 +9,12 @@ export type TodoCounts = {
 }
 
 export function countTodos(todos: readonly Todo[]): TodoCounts {
-  return {
-    total: todos.length,
-    completed: todos.filter((todo) => todo.status === "completed").length,
-    in_progress: todos.filter((todo) => todo.status === "in_progress").length,
-    pending: todos.filter((todo) => todo.status === "pending").length,
-    cancelled: todos.filter((todo) => todo.status === "cancelled").length,
+  const counts: TodoCounts = { total: 0, completed: 0, in_progress: 0, pending: 0, cancelled: 0 }
+  for (const todo of todos) {
+    counts.total += 1
+    counts[todo.status] += 1
   }
+  return counts
 }
 
 export function formatTodos(todos: readonly Todo[]) {

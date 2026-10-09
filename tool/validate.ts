@@ -58,7 +58,7 @@ function validateTodoItem(
   return {
     ok: true,
     todo: {
-      content: item.content,
+      content: item.content.trim(),
       status: item.status,
       priority: item.priority,
       ...(typeof item.activeForm === "string" ? { activeForm: item.activeForm } : {}),

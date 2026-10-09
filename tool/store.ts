@@ -22,6 +22,9 @@ export async function loadTodos(ctx: Plugin.Context, sessionID: string): Promise
       return todo ? [todo] : []
     })
   } catch {
+    // Intentional safe default: the session hook runs before every LLM
+    // round, so a storage blip must degrade to "no todos" rather than
+    // break generation.
     return []
   }
 }

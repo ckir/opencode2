@@ -8,7 +8,7 @@ export function registerTodoWrite(ctx: Plugin.Context) {
   return {
     name: "todowrite",
     description:
-      "Manage a structured todo list for the current session. Replaces the full list each call. Use it to track progress during multi-step work and keep todo statuses current. Statuses: pending, in_progress (exactly one at a time), completed, cancelled. Priorities: high, medium, low.",
+      "Manage a structured todo list for the current session. Replaces the full list each call. Use it to track progress during multi-step work and keep todo statuses current. Statuses: pending, in_progress (aim for exactly one at a time), completed, cancelled. Priorities: high, medium, low.",
     input: inputSchema,
     output: outputSchema,
     options: { codemode: false, permission: "todowrite" },
