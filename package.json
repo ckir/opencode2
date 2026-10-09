@@ -1,0 +1,30 @@
+{
+  "name": "opencode2",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Home of opencode v2 developments (agents, models, skills, themes, commands, plugins)",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckir/opencode2.git"
+  },
+  "homepage": "https://github.com/ckir/opencode2#readme",
+  "bugs": "https://github.com/ckir/opencode2/issues",
+  "workspaces": [
+    "agents/*",
+    "models/*",
+    "skills/*",
+    "themes/*",
+    "commands/*",
+    "plugins/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p plugins/todo/tsconfig.json",
+    "test": "bun test ./plugins/todo"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.0",
+    "typescript": "^5.9.2"
+  }
+}
