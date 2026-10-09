@@ -16,10 +16,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gabparrot/opencode2-todo-tool.git"
+    "url": "git+https://github.com/ckir/opencode2.git"
   },
-  "homepage": "https://github.com/gabparrot/opencode2-todo-tool#readme",
-  "bugs": "https://github.com/gabparrot/opencode2-todo-tool/issues",
+  "homepage": "https://github.com/ckir/opencode2/tree/main/plugins/todo#readme",
+  "bugs": "https://github.com/ckir/opencode2/issues",
   "exports": {
     ".": "./src/index.ts",
     "./tui": "./src/tui.tsx"

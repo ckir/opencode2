@@ -26,12 +26,12 @@ The plugin registers `todowrite` as a native tool internally (`codemode: false`)
 This is the proven way to load the plugin before it is published. Point `plugins` at the **absolute path** of the TypeScript entrypoint:
 
 ```json
-{ "plugins": ["/absolute/path/to/opencode2-todo-tool/opencode2-todo/src/index.ts"] }
+{ "plugins": ["/absolute/path/to/opencode2/plugins/todo/src/index.ts"] }
 ```
 
 Requirements:
 
-- Run `bun install` in the plugin folder (`opencode2-todo/`) first so `node_modules/@opencode/plugin` is present. OpenCode resolves `@opencode/plugin/tui` at runtime for the TUI entry.
+- Run `bun install` in the repo root (`opencode2/`) first so workspace deps are present. OpenCode resolves `@opencode/plugin/tui` at runtime for the TUI entry.
 - The `tui: true` flag only affects the optional TUI sidebar. The server-side `todowrite` tool works whether or not the TUI is running.
 
 opencode2 transpiles the TypeScript entry at runtime — no build step. Alternatively, drop or copy the plugin folder into a `plugins/` subdirectory of your config dir; opencode2 auto-discovers `.ts`/`.js` files there.
